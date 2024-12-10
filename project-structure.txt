@@ -1,0 +1,60 @@
+visa-guide-client/
+├── src/
+│   ├── assets/
+│   │   ├── images/
+│   │   └── styles/
+│   │       └── custom.css
+│   ├── components/
+│   │   ├── shared/
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   ├── Loading.jsx
+│   │   │   └── ErrorMessage.jsx
+│   │   ├── home/
+│   │   │   ├── Banner.jsx
+│   │   │   ├── LatestVisas.jsx
+│   │   │   └── ExtraSections/
+│   │   │       ├── Section1.jsx
+│   │   │       └── Section2.jsx
+│   │   ├── visa/
+│   │   │   ├── VisaCard.jsx
+│   │   │   ├── VisaDetails.jsx
+│   │   │   ├── VisaApplicationModal.jsx
+│   │   │   └── VisaUpdateModal.jsx
+│   │   └── dashboard/
+│   │       ├── MyAddedVisas.jsx
+│   │       └── MyApplications.jsx
+│   ├── layouts/
+│   │   └── MainLayout.jsx
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── AllVisas.jsx
+│   │   ├── AddVisa.jsx
+│   │   ├── VisaDetails.jsx
+│   │   ├── MyAddedVisas.jsx
+│   │   ├── MyApplications.jsx
+│   │   ├── Login.jsx
+│   │   ├── Register.jsx
+│   │   └── NotFound.jsx
+│   ├── routes/
+│   │   ├── Routes.jsx
+│   │   ├── PrivateRoute.jsx
+│   │   └── PublicRoute.jsx
+│   ├── contexts/
+│   │   ├── AuthContext.jsx
+│   │   └── ThemeContext.jsx
+│   ├── hooks/
+│   │   ├── useAuth.js
+│   │   ├── useAxios.js
+│   │   └── useTheme.js
+│   ├── utils/
+│   │   ├── api.js
+│   │   └── firebase.config.js
+│   ├── providers/
+│   │   ├── AuthProvider.jsx
+│   │   └── ThemeProvider.jsx
+│   └── App.jsx
+├── .gitignore
+├── .env
+├── package.json
+└── README.md
