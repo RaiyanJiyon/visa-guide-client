@@ -18,19 +18,19 @@ const Login = () => {
         const email = formData.get('email');
         const password = formData.get('password');
 
-        const userData = {email, password};
+        const userData = { email, password };
         console.log(userData);
 
         signInUser(email, password)
-        .then(userCredential => {
-            console.log(userCredential.user);
-            SuccessToaster('Successfully Sign In');
-            navigate(location?.state ? location.state : '/');
-        })
-        .catch(error => {
-            console.log(error.message);
-            ErrorToaster(error.message)
-        })
+            .then(userCredential => {
+                console.log(userCredential.user);
+                SuccessToaster('Successfully Sign In');
+                navigate(location?.state ? location.state : '/');
+            })
+            .catch(error => {
+                console.log(error.message);
+                ErrorToaster('Incorrect username or password.')
+            })
     }
 
     return (

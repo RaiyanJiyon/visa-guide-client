@@ -1,17 +1,33 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import logo from '../../assets/images/logo.png'
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { AuthContext } from '../../providers/AuthProvider';
+import SuccessToaster from '../toast/SuccessToaster';
+import ErrorToaster from '../toast/ErrorToaster';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const { user, signOutUser } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const toggleNavbar = () => {
         setIsOpen(!isOpen);
     }
 
+    const handleSignOut = () => {
+        signOutUser()
+        .then(() => {
+            SuccessToaster('Log out successfully');
+            navigate('/login')
+        })
+        .catch(error => {
+            ErrorToaster(error.message);
+        })
+    }
+
     return (
         <nav className="bg-white border-gray-200 dark:bg-gray-900">
-            <div className="max-w-screen-xl flex flex-wrap items-center justify-between lg:justify-center gap-10 mx-auto p-4">
+            <div className="max-w-screen-xl flex flex-wrap items-center justify-between lg:justify-center gap-10 mx-auto py-4">
                 <Link to={'/'} className="flex items-center space-x-3 rtl:space-x-reverse">
                     <img src={logo} className="h-8" alt="Flowbite Logo" />
                     <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Visa Guide</span>
@@ -48,12 +64,29 @@ const Navbar = () => {
                         </NavLink>
                     </ul>
                     <div className='flex gap-2 lg:gap-2 lg:ml-4 mt-4 lg:mt-0'>
-                        <Link to={'/login'}>
-                            <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Login</button>
-                        </Link>
-                        <Link to={'/register'}>
-                            <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Register</button>
-                        </Link>
+                        {
+                            user ?
+                                <div className='flex items-center gap-4'>
+                                    <div tabIndex={0} role="button" className="hidden lg:flex btn btn-ghost btn-circle avatar">
+                                        <div className="w-10 rounded-full">
+                                            <img
+                                                alt="profile image"
+                                                src={user.photoURL} />
+                                        </div>
+                                    </div>
+                                    <button onClick={handleSignOut} type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Logout</button>
+                                </div>
+                                :
+                                <div>
+
+                                    <Link to={'/login'}>
+                                        <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Login</button>
+                                    </Link>
+                                    <Link to={'/register'}>
+                                        <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Register</button>
+                                    </Link>
+                                </div>
+                        }
                     </div>
                 </div>
             </div>
