@@ -2,12 +2,11 @@ import { useContext } from 'react';
 import { FaApple, FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../providers/AuthProvider';
 import SuccessToaster from '../components/toast/SuccessToaster';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import ErrorToaster from '../components/toast/ErrorToaster';
 
 const Register = () => {
     const { setUser, createUser } = useContext(AuthContext);
-    const location = useLocation();
     const navigate = useNavigate();
 
     const handleSignUpForm = e => {
@@ -61,11 +60,11 @@ const Register = () => {
                             Create your Free Account
                         </h1>
                         <div className="flex flex-col md:flex-row items-center justify-between gap-2">
-                            <div className="flex items-center md:justify-between gap-2 w-full border border-gray-300 px-4 py-2 rounded-lg cursor-pointer">
+                            <div className="flex items-center md:justify-center gap-2 w-full border border-gray-300 px-4 py-2 rounded-lg cursor-pointer">
                                 <FaGoogle />
                                 <span className="text-sm font-medium">Log in with Google</span>
                             </div>
-                            <div className="flex items-center md:justify-between gap-2 w-full border border-gray-300 px-4 py-2 rounded-lg cursor-not-allowed">
+                            <div className="flex items-center md:justify-center gap-2 w-full border border-gray-300 px-4 py-2 rounded-lg cursor-not-allowed">
                                 <FaApple />
                                 <span className="text-sm font-medium">Log in with Apple</span>
                             </div>
