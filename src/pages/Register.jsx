@@ -1,6 +1,15 @@
+import { useContext } from 'react';
 import { FaApple, FaGoogle } from 'react-icons/fa';
+import { AuthContext } from '../providers/AuthProvider';
+import SuccessToaster from '../components/toast/SuccessToaster';
+import { useLocation, useNavigate } from 'react-router-dom';
+import ErrorToaster from '../components/toast/ErrorToaster';
 
 const Register = () => {
+    const { setUser, createUser } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+
     const handleSignUpForm = e => {
         e.preventDefault();
 
@@ -12,8 +21,35 @@ const Register = () => {
         const password = formData.get('password');
         const confirmPassword = formData.get('confirm-password');
 
-        const userData = {name, email, photoURL, password, confirmPassword};
-        console.log(userData); 
+        const userData = { name, email, photoURL, password, confirmPassword };
+        console.log(userData);
+
+        const validPassword = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+
+        if (!validPassword.test(password)) {
+            ErrorToaster('Password should be at least 6 character and have at least 1 uppercase and 1 lowercase')
+            return;
+        }
+
+        if (password !== confirmPassword) {
+            ErrorToaster('Passwords do not match');
+            return;
+        }
+
+        createUser(email, password)
+        .then(userCredential => {
+            const user = userCredential.user;
+            setUser(user, {
+                displayName: name,
+                photoURL: photoURL
+            })
+            SuccessToaster('Successfully Signed In');
+            navigate('/login');
+            
+        })
+        .catch(error => {
+            ErrorToaster(error.message);
+        })
     }
     return (
         <section className="bg-gray-50 dark:bg-gray-900 md:py-40">
