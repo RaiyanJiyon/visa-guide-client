@@ -6,9 +6,20 @@ import SuccessToaster from "../components/toast/SuccessToaster";
 import ErrorToaster from "../components/toast/ErrorToaster";
 
 const Login = () => {
-    const { signInUser } = useContext(AuthContext);
+    const { signInUser, createUserWithGoogle } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
+
+    const handleGoogleSignIn = () => {
+        createUserWithGoogle()
+        .then(() => {
+            SuccessToaster('Successfully Logged In with Google');
+            navigate(location?.state ? location.state : '/');
+        })
+        .catch(error => {
+            ErrorToaster(error.message);
+        });
+    }
 
     const handleSignInForm = e => {
         e.preventDefault();
@@ -34,7 +45,7 @@ const Login = () => {
     }
 
     return (
-        <section className="bg-gray-50 dark:bg-gray-900 py-10">
+        <section className="bg-gray-50 dark:bg-gray-900 md:py-10">
             <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
                 <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                     <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -42,7 +53,7 @@ const Login = () => {
                             Sign in to your account
                         </h1>
                         <div className="flex flex-col md:flex-row items-center justify-between gap-2">
-                            <div className="flex items-center md:justify-center gap-2 w-full border border-gray-300 px-4 py-2 rounded-lg cursor-pointer">
+                            <div onClick={handleGoogleSignIn} className="flex items-center md:justify-center gap-2 w-full border border-gray-300 px-4 py-2 rounded-lg cursor-pointer">
                                 <FaGoogle />
                                 <span className="text-sm font-medium">Log in with Google</span>
                             </div>

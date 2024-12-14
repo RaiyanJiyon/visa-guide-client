@@ -2,12 +2,24 @@ import { useContext } from 'react';
 import { FaApple, FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../providers/AuthProvider';
 import SuccessToaster from '../components/toast/SuccessToaster';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import ErrorToaster from '../components/toast/ErrorToaster';
 
 const Register = () => {
-    const { setUser, createUser } = useContext(AuthContext);
+    const { setUser, createUser, createUserWithGoogle } = useContext(AuthContext);
+    const location = useLocation();
     const navigate = useNavigate();
+
+    const handleGoogleSignUp = () => {
+        createUserWithGoogle()
+        .then(() => {
+            SuccessToaster('Successfully Sign In with Google');
+            navigate(location?.state ? location.state : '/')
+        })
+        .catch(error => {
+            ErrorToaster(error.message);
+        });
+    }
 
     const handleSignUpForm = e => {
         e.preventDefault();
@@ -60,7 +72,7 @@ const Register = () => {
                             Create your Free Account
                         </h1>
                         <div className="flex flex-col md:flex-row items-center justify-between gap-2">
-                            <div className="flex items-center md:justify-center gap-2 w-full border border-gray-300 px-4 py-2 rounded-lg cursor-pointer">
+                            <div onClick={handleGoogleSignUp} className="flex items-center md:justify-center gap-2 w-full border border-gray-300 px-4 py-2 rounded-lg cursor-pointer">
                                 <FaGoogle />
                                 <span className="text-sm font-medium">Log in with Google</span>
                             </div>
