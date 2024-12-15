@@ -5,7 +5,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const FAQ = () => {
     return (
-        <div className="hero min-h-screen w-11/12 mx-auto">
+        <div className="hero w-11/12 mx-auto">
             <div className="hero-content flex-col lg:flex-row lg:items-start gap-10">
                 <div className="lg:w-1/2">
                     <div className='space-y-4'>
@@ -16,7 +16,7 @@ const FAQ = () => {
                     </div>
                     <img
                         src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/faq_img.png"
-                        className="max-w-sm rounded-lg mt-10"
+                        className="rounded-lg mt-10"
                     />
                 </div>
                 <div className="lg:w-1/2">

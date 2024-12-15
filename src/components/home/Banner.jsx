@@ -16,8 +16,6 @@ const Banner = () => {
                 spaceBetween={50}
                 slidesPerView={1}
                 autoplay={{ delay: 2500, disableOnInteraction: false }}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
             >
                 <SwiperSlide>
                     <BannerDetails image={'https://visa-navigator-client-67a8d.web.app/assets/bg2-CMldZ7qT.avif'} title={'Unlocking Global Opportunities'} description={'Visa helps connect businesses, banks, and governments in over 200 countries, making it easier for people to access the global economy and achieve their financial goals.'} />
@@ -30,7 +28,7 @@ const Banner = () => {
                 </SwiperSlide>
             </Swiper>
 
-            <div className='md:w-1/2 mx-auto md:text-center mt-10 space-y-4'>
+            <div className='w-11/12 md:w-1/2 mx-auto md:text-center mt-10 space-y-4'>
                 <h1 className='text-3xl font-bold'>Welcome to <span className='text-blue-600'>Visa Navigator!</span></h1>
                 <p className='text-sm'>Start your journey and explore your destination</p>
                 <p className='font-medium pb-6'>
