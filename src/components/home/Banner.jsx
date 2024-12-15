@@ -6,6 +6,7 @@ import 'swiper/css';
 // Import Swiper modules
 import { Autoplay } from 'swiper/modules';
 import BannerDetails from './BannerDetails';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -28,6 +29,17 @@ const Banner = () => {
                     <BannerDetails image={'https://visa-navigator-client-67a8d.web.app/assets/bg-1-Byn0P2Ec.avif'} title={'Transforming Transactions'} description={'With a history of pioneering payment technology, Visa is dedicated to converting consumer spending from cash to digital payments, driving sustainable commerce and economic growth.'} />
                 </SwiperSlide>
             </Swiper>
+
+            <div className='md:w-1/2 mx-auto md:text-center mt-10 space-y-4'>
+                <h1 className='text-3xl font-bold'>Welcome to <span className='text-blue-600'>Visa Navigator!</span></h1>
+                <p className='text-sm'>Start your journey and explore your destination</p>
+                <p className='font-medium pb-6'>
+                    Discover a seamless way to manage and apply for visas. Your journey starts here!
+                </p>
+                <Link to={'/all-visas'}>
+                    <button className='btn bg-blue-500 text-white font-bold border-none'>Explore Visas Now</button>
+                </Link>
+            </div>
         </div>
     );
 };
