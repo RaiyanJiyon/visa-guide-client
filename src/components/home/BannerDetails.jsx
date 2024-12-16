@@ -15,7 +15,7 @@ const BannerDetails = ({ image, title, description }) => {
                         {description}
                     </p>
                     <Link to={'/all-visas'}>
-                    <button className="btn bg-blue-500 text-white font-bold border-none">Learn More</button>
+                    <button className="btn bg-blue-500 text-white font-bold border-none">Explore Visas Now</button>
                     </Link>
                 </div>
             </div>

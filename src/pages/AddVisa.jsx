@@ -74,14 +74,14 @@ const AddVisa = () => {
 
     return (
         <div>
-            <div className="flex flex-col py-10 bg-blue-500 text-white text-center">
+            <div className="flex flex-col gap-2 py-10 bg-blue-500 text-white text-center">
                 <h2 className="text-3xl font-bold">Add Visa Details</h2>
                 <p className="font-medium">Simplify visa management by adding essential visa information here.</p>
             </div>
 
             <form onSubmit={handleAddVisaForm} className="card-body">
                 {/* 1st row */}
-                <div className="flex items-center justify-between gap-6">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                     <div className="form-control w-full">
                         <label className="label">
                             <span className="label-text font-medium">Country Photo</span>
@@ -106,7 +106,7 @@ const AddVisa = () => {
                     </div>
                 </div>
                 {/* 2nd row */}
-                <div className="flex items-center justify-between gap-6">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                     <div className="form-control w-full">
                         <label className="label">
                             <span className="label-text font-medium">Visa Type</span>
@@ -131,7 +131,7 @@ const AddVisa = () => {
                     </div>
                 </div>
                 {/* 3rd row */}
-                <div className="flex items-center justify-between gap-6">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                     <div className="form-control w-full">
                         <label className="label">
                             <span className="label-text font-medium">Age Restriction</span>
@@ -156,7 +156,7 @@ const AddVisa = () => {
                     </div>
                 </div>
                 {/* 4th row */}
-                <div className="flex items-center justify-between gap-6">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                     <div className="form-control w-full">
                         <label className="label">
                             <span className="label-text font-medium">Validity</span>
@@ -192,7 +192,7 @@ const AddVisa = () => {
                 </div>
                 {/* 6th row */}
                 <h3 className="font-medium text-sm mt-2">Required Documents</h3>
-                <div className="grid grid-cols-2 gap-6 px-2 py-6 rounded-lg border border-sky-400">
+                <div className="grid md:grid-cols-2 gap-6 px-2 py-6 rounded-lg border border-sky-400">
                     <div className="form-control">
                         <label className="cursor-pointer flex items-center gap-2">
                             <input

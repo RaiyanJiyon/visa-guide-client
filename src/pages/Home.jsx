@@ -1,6 +1,7 @@
 import Banner from "../components/home/Banner";
 import Article from "../components/home/ExtraSections/Article";
 import FAQ from "../components/home/ExtraSections/FAQ";
+import TopCountries from "../components/home/ExtraSections/TopCountries";
 
 const Home = () => {
     return (
@@ -8,10 +9,13 @@ const Home = () => {
             <div>
                 <Banner />
             </div>
-            <div className="mt-10">
+            <div className="my-10">
+                <TopCountries />
+            </div>
+            <div className="my-16">
                 <FAQ />
             </div>
-            <div className="mt-10 mb-10">
+            <div className="my-10">
                 <Article />
             </div>
         </div>

@@ -87,7 +87,7 @@ const Header = () => {
     };
 
     return (
-        <div className="navbar bg-[#F2F2F2] border-gray-200 text-white">
+        <div className="navbar bg-[#F2F2F2] border-gray-200 text-white md:px-10">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
