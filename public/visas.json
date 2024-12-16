@@ -1,116 +1,60 @@
 [
     {
-        "CountryImage": "https://images.freeimages.com/images/large-previews/874/halifax-canada-1191634.jpg?fmt=webp&h=350",
-        "": "Canada",
-        "Visa_Type": "Student Visa",
-        "Processing_Time": "4-6 weeks",
+        "CountryImage": "https://i.ibb.co.com/RvFy2z9/Kuala-Lumpur-Malaysia.webp",
+        "CountryName": "Malaysia",
+        "Visa_Type": "Tourist Visa",
+        "Processing_Time": "1-2 weeks",
         "Required_Documents": [
             "Valid passport",
             "Visa application form",
-            "Recent passport-sized photograph",
-            "Acceptance letter from an institution",
-            "Proof of funds",
-            "Medical examination report"
+            "Return flight ticket",
+            "Proof of accommodation",
+            "Sufficient funds"
         ],
-        "Description": "The Canada Student Visa allows students to pursue academic courses in recognized Canadian institutions.",
-        "Age_Restriction": "18-45 years",
-        "Fee": "$150",
-        "Validity": "5 years",
+        "Description": "The Malaysia Tourist Visa allows travelers to explore the cultural and scenic beauty of Malaysia.",
+        "Age_Restriction": "No restriction",
+        "Fee": "$50",
+        "Validity": "90 days",
         "Application_Method": "Online"
     },
     {
-        "CountryImage": "https://images.freeimages.com/images/large-previews/c38/us-flag-1520656.jpg?fmt=webp&h=350",
-        "CountryName": "United States",
-        "Visa_Type": "Tourist Visa",
+        "CountryImage": "https://economymiddleeast.com/cdn-cgi/imagedelivery/Xfg_b7GtigYi5mxeAzkt9w/economymiddleeast.com/2023/06/To-use.jpg/w=1200,h=878",
+        "CountryName": "Qatar",
+        "Visa_Type": "Business Visa",
         "Processing_Time": "2-3 weeks",
         "Required_Documents": [
             "Valid passport",
-            "DS-160 application form",
-            "Visa appointment confirmation",
-            "Recent photograph",
-            "Travel itinerary",
+            "Visa application form",
+            "Invitation letter",
+            "Company registration details",
             "Proof of financial means"
         ],
-        "Description": "The US Tourist Visa is ideal for leisure or short-term visits to explore the United States.",
+        "Description": "The Qatar Business Visa is suitable for attending business meetings and conferences.",
         "Age_Restriction": "No restriction",
-        "Fee": "$160",
-        "Validity": "10 years",
-        "Application_Method": "Online"
-    },
-    {
-        "CountryImage": "https://images.freeimages.com/images/large-previews/2a0/sydney-opera-house-1452627.jpg?fmt=webp&h=350",
-        "CountryName": "Australia",
-        "Visa_Type": "Work Visa",
-        "Processing_Time": "6-8 weeks",
-        "Required_Documents": [
-            "Valid passport",
-            "Visa application form",
-            "Job offer letter",
-            "Proof of qualifications",
-            "Health insurance"
-        ],
-        "Description": "The Australia Work Visa enables individuals to work temporarily in Australia for a specific employer.",
-        "Age_Restriction": "18-50 years",
-        "Fee": "$300",
-        "Validity": "2 years",
+        "Fee": "$80",
+        "Validity": "30 days",
         "Application_Method": "Online & Offline"
     },
     {
-        "CountryImage": "https://images.freeimages.com/images/large-previews/8d3/tower-bridge-1231638.jpg?fmt=webp&h=350",
-        "CountryName": "United Kingdom",
-        "Visa_Type": "Skilled Worker Visa",
-        "Processing_Time": "3-4 weeks",
-        "Required_Documents": [
-            "Valid passport",
-            "Certificate of Sponsorship",
-            "Proof of English proficiency",
-            "Proof of financial support",
-            "TB test results"
-        ],
-        "Description": "The UK Skilled Worker Visa allows professionals to work in the UK in eligible job roles.",
-        "Age_Restriction": "No restriction",
-        "Fee": "$610",
-        "Validity": "5 years",
-        "Application_Method": "Online"
-    },
-    {
-        "CountryImage": "https://images.freeimages.com/images/large-previews/f70/enchantic-rothenburg-germany-1214192.jpg?fmt=webp&h=350",
-        "CountryName": "Germany",
-        "Visa_Type": "Job Seeker Visa",
-        "Processing_Time": "6-8 weeks",
+        "CountryImage": "https://i.ibb.co.com/8mznR15/tips-for-making-your-trip-to-hong-kong-1920x1080.jpg",
+        "CountryName": "Hong Kong",
+        "Visa_Type": "Tourist Visa",
+        "Processing_Time": "1 week",
         "Required_Documents": [
             "Valid passport",
             "Visa application form",
-            "Proof of academic qualifications",
             "Proof of accommodation",
-            "Proof of funds"
+            "Travel itinerary",
+            "Sufficient funds"
         ],
-        "Description": "The Germany Job Seeker Visa allows professionals to explore job opportunities in Germany.",
-        "Age_Restriction": "18-45 years",
-        "Fee": "$75",
-        "Validity": "6 months",
+        "Description": "The Hong Kong Tourist Visa allows short-term visits to enjoy the city's attractions.",
+        "Age_Restriction": "No restriction",
+        "Fee": "$30",
+        "Validity": "14 days",
         "Application_Method": "Online"
     },
     {
-        "CountryImage": "https://images.freeimages.com/images/large-previews/80d/new-zealand-is-beautiful-1058407.jpg?fmt=webp&h=350",
-        "CountryName": "New Zealand",
-        "Visa_Type": "Working Holiday Visa",
-        "Processing_Time": "2-3 weeks",
-        "Required_Documents": [
-            "Valid passport",
-            "Visa application form",
-            "Proof of sufficient funds",
-            "Medical insurance",
-            "Return flight ticket"
-        ],
-        "Description": "The New Zealand Working Holiday Visa is designed for young individuals to work and travel in New Zealand.",
-        "Age_Restriction": "18-30 years",
-        "Fee": "$208",
-        "Validity": "1 year",
-        "Application_Method": "Online"
-    },
-    {
-        "CountryImage": "https://images.freeimages.com/images/large-previews/05f/potato-landscape-hokkaido-japan-1367129.jpg?fmt=webp&h=350",
+        "CountryImage": "https://i.ibb.co.com/WBmKLjg/france.jpg",
         "CountryName": "Japan",
         "Visa_Type": "Cultural Exchange Visa",
         "Processing_Time": "4-5 weeks",
@@ -128,57 +72,148 @@
         "Application_Method": "Offline"
     },
     {
-        "CountryImage": "https://images.freeimages.com/images/large-previews/5bd/singapore-1191511.jpg?fmt=webp&h=350",
-        "CountryName": "Singapore",
-        "Visa_Type": "Business Visa",
-        "Processing_Time": "1-2 weeks",
-        "Required_Documents": [
-            "Valid passport",
-            "Visa application form",
-            "Business invitation letter",
-            "Proof of financial stability",
-            "Travel itinerary"
-        ],
-        "Description": "The Singapore Business Visa allows individuals to attend business meetings and conferences in Singapore.",
-        "Age_Restriction": "No restriction",
-        "Fee": "$50",
-        "Validity": "2 years",
-        "Application_Method": "Online"
-    },
-    {
-        "CountryImage": "https://images.freeimages.com/images/large-previews/0ed/la-petite-france-1219874.jpg?fmt=webp&h=350",
-        "CountryName": "France",
+        "CountryImage": "https://i.ytimg.com/vi/Qk30DJJO0AM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBljdwZxBCZPjSvMPRvZ-TAhacJ_A",
+        "CountryName": "Switzerland",
         "Visa_Type": "Tourist Visa",
         "Processing_Time": "2-3 weeks",
         "Required_Documents": [
             "Valid passport",
             "Visa application form",
-            "Hotel bookings",
-            "Proof of financial resources",
-            "Travel insurance"
+            "Proof of accommodation",
+            "Travel insurance",
+            "Bank statements"
         ],
-        "Description": "The France Tourist Visa allows travelers to explore the beautiful landscapes and cultural heritage of France.",
+        "Description": "The Switzerland Tourist Visa is ideal for visiting the country's scenic and cultural destinations.",
+        "Age_Restriction": "No restriction",
+        "Fee": "$70",
+        "Validity": "90 days",
+        "Application_Method": "Online"
+    },
+    {
+        "CountryImage": "https://i.ibb.co.com/nPb1T0R/america.jpg",
+        "CountryName": "America",
+        "Visa_Type": "Tourist Visa",
+        "Processing_Time": "2-3 weeks",
+        "Required_Documents": [
+            "Valid passport",
+            "DS-160 application form",
+            "Visa appointment confirmation",
+            "Recent photograph",
+            "Travel itinerary",
+            "Proof of financial means"
+        ],
+        "Description": "The US Tourist Visa is ideal for leisure or short-term visits to explore the United States.",
+        "Age_Restriction": "No restriction",
+        "Fee": "$160",
+        "Validity": "10 years",
+        "Application_Method": "Online"
+    },
+    {
+        "CountryImage": "https://i.ibb.co.com/Rz3ZsCw/italy.jpg",
+        "CountryName": "Italy",
+        "Visa_Type": "Tourist Visa",
+        "Processing_Time": "2-4 weeks",
+        "Required_Documents": [
+            "Valid passport",
+            "Visa application form",
+            "Hotel bookings",
+            "Travel itinerary",
+            "Proof of funds"
+        ],
+        "Description": "The Italy Tourist Visa allows travelers to visit Italy for tourism and leisure purposes.",
         "Age_Restriction": "No restriction",
         "Fee": "$80",
         "Validity": "90 days",
         "Application_Method": "Online"
     },
     {
-        "CountryImage": "https://images.freeimages.com/images/large-previews/578/street-at-night-1216978.jpg?fmt=webp&h=350",
-        "CountryName": "South Korea",
-        "Visa_Type": "Teaching Visa",
-        "Processing_Time": "4-6 weeks",
+        "CountryImage": "https://i.ibb.co.com/tL3VKqX/Big-Ben-Flag-United-Kingdom.jpg",
+        "CountryName": "United Kingdom",
+        "Visa_Type": "Skilled Worker Visa",
+        "Processing_Time": "3-4 weeks",
+        "Required_Documents": [
+            "Valid passport",
+            "Certificate of Sponsorship",
+            "Proof of English proficiency",
+            "Proof of financial support",
+            "TB test results"
+        ],
+        "Description": "The UK Skilled Worker Visa allows professionals to work in the UK in eligible job roles.",
+        "Age_Restriction": "No restriction",
+        "Fee": "$610",
+        "Validity": "5 years",
+        "Application_Method": "Online"
+    },
+    {
+        "CountryImage": "https://i.ibb.co.com/D8mM21h/brazil-4809011-1280.webp",
+        "CountryName": "Brazil",
+        "Visa_Type": "Tourist Visa",
+        "Processing_Time": "2 weeks",
         "Required_Documents": [
             "Valid passport",
             "Visa application form",
-            "Teaching certificate",
-            "Employment contract",
-            "Criminal record check"
+            "Travel itinerary",
+            "Proof of accommodation",
+            "Bank statements"
         ],
-        "Description": "The South Korea Teaching Visa is designed for qualified individuals to teach English in South Korea.",
+        "Description": "The Brazil Tourist Visa allows travelers to explore Brazil's beautiful landscapes and culture.",
         "Age_Restriction": "No restriction",
-        "Fee": "$45",
-        "Validity": "1 year",
-        "Application_Method": "Offline"
+        "Fee": "$40",
+        "Validity": "90 days",
+        "Application_Method": "Online"
+    },
+    {
+        "CountryImage": "https://i.ibb.co.com/9sQ9xdY/hindi3.jpg",
+        "CountryName": "India",
+        "Visa_Type": "Tourist Visa",
+        "Processing_Time": "1-2 weeks",
+        "Required_Documents": [
+            "Valid passport",
+            "Visa application form",
+            "Recent photograph",
+            "Travel itinerary",
+            "Proof of funds"
+        ],
+        "Description": "The India Tourist Visa allows travelers to explore India's cultural and historical landmarks.",
+        "Age_Restriction": "No restriction",
+        "Fee": "$25",
+        "Validity": "30 days",
+        "Application_Method": "Online"
+    },
+    {
+        "CountryImage": "https://i.ibb.co.com/bRMfnhY/soudi-arabia.jpg",
+        "CountryName": "Saudi Arabia",
+        "Visa_Type": "Tourist Visa",
+        "Processing_Time": "1-2 weeks",
+        "Required_Documents": [
+            "Valid passport",
+            "Visa application form",
+            "Travel insurance",
+            "Return flight ticket",
+            "Proof of accommodation"
+        ],
+        "Description": "The Saudi Arabia Tourist Visa allows visitors to explore Saudi Arabia's culture and heritage.",
+        "Age_Restriction": "No restriction",
+        "Fee": "$80",
+        "Validity": "90 days",
+        "Application_Method": "Online"
+    },
+    {
+        "CountryImage": "https://i.ibb.co.com/Hr62Mvh/pakistan.jpg",
+        "CountryName": "Pakistan",
+        "Visa_Type": "Tourist Visa",
+        "Processing_Time": "2-3 weeks",
+        "Required_Documents": [
+            "Valid passport",
+            "Visa application form",
+            "Invitation letter (if applicable)",
+            "Hotel bookings",
+            "Proof of financial means"
+        ],
+        "Description": "The Pakistan Tourist Visa allows visitors to explore the cultural and natural landmarks of Pakistan.",
+        "Age_Restriction": "No restriction",
+        "Fee": "$60",
+        "Validity": "30 days",
+        "Application_Method": "Online & Offline"
     }
 ]
