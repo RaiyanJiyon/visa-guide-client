@@ -1,5 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import VisaApplicationModal from "../components/visa/VisaApplicationModal";
 
 const VisaDetails = () => {
     useEffect(() => {
@@ -7,6 +8,10 @@ const VisaDetails = () => {
     }, []);
 
     const visaData = useLoaderData();
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
 
     return (
         <div className="w-11/12 mx-auto my-10 shadow-2xl p-10">
@@ -58,8 +63,10 @@ const VisaDetails = () => {
                 </div>
             </div>
             <div className="flex justify-center mt-6">
-                <button className="btn bg-blue-600 text-white font-bold">Apply Now</button>
+                <button onClick={openModal} className="btn bg-blue-600 text-white font-bold">Apply Now</button>
             </div>
+        
+            <VisaApplicationModal isOpen={isModalOpen} onClose={closeModal} />
         </div>
     );
 };
