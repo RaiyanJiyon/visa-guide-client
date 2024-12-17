@@ -28,7 +28,7 @@ const Article = () => {
                                 <img
                                     src={article.image}
                                     alt="image"
-                                    className="w-full h-48 object-cover"
+                                    className="w-full h-48 object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
                                 />
                             </figure>
                             <div className="card-actions mt-6 pl-6">
