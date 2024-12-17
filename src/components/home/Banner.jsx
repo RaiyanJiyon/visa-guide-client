@@ -15,7 +15,7 @@ const Banner = () => {
                 modules={[Autoplay]}
                 spaceBetween={50}
                 slidesPerView={1}
-                autoplay={{ delay: 2500, disableOnInteraction: false }}
+                autoplay={{ delay: 5000, disableOnInteraction: false }}
             >
                 <SwiperSlide>
                     <BannerDetails image={'https://visa-navigator-client-67a8d.web.app/assets/bg2-CMldZ7qT.avif'} title={'Unlocking Global Opportunities'} description={'Visa helps connect businesses, banks, and governments in over 200 countries, making it easier for people to access the global economy and achieve their financial goals.'} />
