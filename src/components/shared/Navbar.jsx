@@ -4,6 +4,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import SuccessToaster from "../toast/SuccessToaster";
 import ErrorToaster from "../toast/ErrorToaster";
+import ThemeContext from '../../contexts/ThemeContext';
 
 const Header = () => {
     const { user, signOutUser } = useContext(AuthContext);
@@ -121,7 +122,8 @@ const Header = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-4">{links}</ul>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end gap-2">
+                <ThemeContext />
                 {user ? (
                     <div className="dropdown dropdown-end">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
