@@ -19,9 +19,12 @@ const LatestVisas = () => {
     }, []);
 
     return (
-        <div>
-            <h1>Latest Visas</h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-10">
+        <div className="w-11/12 mx-auto">
+            <div className="flex flex-col items-center space-y-3">
+                <h2 className="text-3xl font-bold">Latest Visas</h2>
+                <p className="text-gray-600">Featuring the latest available visas</p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-4">
                 {latestVisas.map((visa, idx) => (
                     <VisaCard key={idx} visa={visa} />
                 ))}

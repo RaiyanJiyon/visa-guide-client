@@ -1,7 +1,11 @@
+import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../providers/AuthProvider';
+import { use } from 'react';
 
 const AddVisa = () => {
+    const {user} = useContext(AuthContext);
     const navigate = useNavigate();
 
     const handleAddVisaForm = e => {
@@ -22,6 +26,7 @@ const AddVisa = () => {
         const Required_Documents = Array.from(formData.getAll('requiredDocuments'));
 
         const visaData = {
+            email: user.email,
             CountryImage: CountryImage,
             CountryName: CountryName,
             Visa_Type: Visa_Type,
@@ -31,7 +36,7 @@ const AddVisa = () => {
             Validity: Validity,
             Application_Method: Application_Method,
             Description: Description,
-            Required_Documents: Required_Documents
+            Required_Documents: Required_Documents,
         };
         console.log(visaData);
 

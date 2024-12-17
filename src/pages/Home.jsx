@@ -13,7 +13,7 @@ const Home = () => {
             <div className="my-10">
                 <TopCountries />
             </div>
-            <div className="my-10">
+            <div className="my-16">
                 <LatestVisas />
             </div>
             <div className="my-16">
