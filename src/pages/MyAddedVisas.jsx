@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const MyAddedVisas = () => {
@@ -32,6 +33,47 @@ const MyAddedVisas = () => {
         navigate(`/update-visa/${id}`);
     }
 
+    const handleDeleteVisa = (id) => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/visa/${id}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your file has been deleted.",
+                                icon: "success"
+                            });
+                            setAddedVisas(addedVisas.filter(visa => visa._id !== id));
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error deleting visa:', error);
+                        Swal.fire({
+                            title: "Error!",
+                            text: "There was an error deleting the visa.",
+                            icon: "error"
+                        });
+                    });
+            }
+        });
+    };
+
+
     return (
         <div className="w-11/12 mx-auto">
             {addedVisas.length > 0 ? (
@@ -62,7 +104,7 @@ const MyAddedVisas = () => {
                                 </p>
                                 <div className="flex justify-between gap-2 pt-4">
                                     <button onClick={() => handleUpdateVisa(visa._id)} className="btn bg-green-500 text-white font-bold">Update</button>
-                                    <button className="btn bg-red-500 text-white font-bold">Delete</button>
+                                    <button onClick={() => handleDeleteVisa(visa._id)} className="btn bg-red-500 text-white font-bold">Delete</button>
                                 </div>
                             </div>
                         </div>
