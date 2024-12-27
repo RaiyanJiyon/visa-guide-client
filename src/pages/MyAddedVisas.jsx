@@ -1,9 +1,17 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
+import VisaUpdateModal from "../components/visa/VisaUpdateModal";
 
 const MyAddedVisas = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+    
     const { user } = useContext(AuthContext);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
     const [addedVisas, setAddedVisas] = useState([]);
 
     useEffect(() => {
@@ -50,8 +58,13 @@ const MyAddedVisas = () => {
                                 <p className="text-slate-800 leading-normal text-sm">
                                     <span className="font-bold">Application Method:</span> {visa.Application_Method}
                                 </p>
+                            <div className="flex justify-between gap-2 pt-4">
+                                <button onClick={openModal} className="btn bg-green-500 text-white font-bold">Update</button>
+                                <button className="btn bg-red-500 text-white font-bold">Delete</button>
+                            </div>
                             </div>
 
+                            <VisaUpdateModal isOpen={isModalOpen} onClose={closeModal} />
                         </div>
                     ))}
                 </div>

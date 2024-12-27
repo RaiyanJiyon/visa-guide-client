@@ -1,8 +1,12 @@
-import React, { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 
 const VisaApplicationModal = ({ isOpen, onClose }) => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const { user } = useContext(AuthContext);
 
     const handleVisaApplicationForm = e => {

@@ -1,4 +1,6 @@
 import logo from '../../assets/images/logo.png'
+import { Tooltip } from 'react-tooltip';
+import 'react-tooltip/dist/react-tooltip.css';
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Link, NavLink, useNavigate } from "react-router-dom";
@@ -126,7 +128,7 @@ const Header = () => {
                 <ThemeContext />
                 {user ? (
                     <div className="dropdown dropdown-end">
-                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar" data-tooltip-id="avatar-tooltip">
                             <div className="w-10 rounded-full">
                                 <img
                                     alt="Profile image"
@@ -134,6 +136,7 @@ const Header = () => {
                                 />
                             </div>
                         </div>
+                            <Tooltip className="z-10" id="avatar-tooltip">{user.displayName}</Tooltip>
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-blue-500 text-white rounded-box z-[1] mt-3 w-52 p-2 shadow"
