@@ -10,6 +10,7 @@ import Register from "../pages/Register";
 import VisaDetails from "../pages/VisaDetails";
 import NotFound from "../pages/NotFound";
 import PrivateRoute from "./PrivateRoute";
+import UpdateVisa from "../pages/UpdateVisa";
 
 const router = createBrowserRouter([
     {
@@ -58,6 +59,15 @@ const router = createBrowserRouter([
                         <MyApplications />
                     </PrivateRoute>
                 ),
+            },
+            {
+                path: "/update-visa/:id",
+                element: (
+                    <PrivateRoute>
+                        <UpdateVisa />
+                    </PrivateRoute>
+                ),
+                loader: () => fetch('http://localhost:5000/visas')
             },
             {
                 path: "/login",

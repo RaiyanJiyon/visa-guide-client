@@ -14,7 +14,7 @@ const AllVisas = () => {
 
     return (
         <div className="w-11/12 mx-auto">
-            <div className="mt-10 mb-4">
+            <div className="mt-10 mb-4 space-y-3">
                 <h2 className="text-3xl font-bold text-center">
                     Visa Application Management
                 </h2>
