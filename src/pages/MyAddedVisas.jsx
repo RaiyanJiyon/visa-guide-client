@@ -44,7 +44,7 @@ const MyAddedVisas = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://visa-guide-server-zeta.vercel.app/visa/${id}`, {
+                fetch(`http://localhost:5000/visa/${id}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json'
@@ -76,47 +76,47 @@ const MyAddedVisas = () => {
 
     return (
         <div className="w-11/12 mx-auto">
-            {addedVisas.length > 0 ? (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
-                    {addedVisas.map((visa, index) => (
-                        <div key={index} className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg">
-                            <div className="relative h-40 m-2.5 overflow-hidden text-white rounded-md">
-                                <img className="w-full h-full transition-transform duration-300 ease-in-out transform hover:scale-110" src={visa.CountryImage} alt="card-image" />
-                            </div>
-                            <div className="p-4 space-y-2">
-                                <h6 className="mb-2 text-slate-800 text-xl font-semibold">
-                                    {visa.CountryName}
-                                </h6>
-                                <p className="text-slate-800 leading-normal text-sm">
-                                    <span className="font-bold">Visa Type:</span> {visa.Visa_Type}
-                                </p>
-                                <p className="text-slate-800 leading-normal text-sm">
-                                    <span className="font-bold">Processing Time:</span> {visa.Processing_Time}
-                                </p>
-                                <p className="text-slate-800 leading-normal text-sm">
-                                    <span className="font-bold">Fee:</span> {visa.Fee}
-                                </p>
-                                <p className="text-slate-800 leading-normal text-sm">
-                                    <span className="font-bold">Validity:</span> {visa.Validity}
-                                </p>
-                                <p className="text-slate-800 leading-normal text-sm">
-                                    <span className="font-bold">Application Method:</span> {visa.Application_Method}
-                                </p>
-                                <div className="flex justify-between gap-2 pt-4">
-                                    <button onClick={() => handleUpdateVisa(visa._id)} className="btn bg-green-500 text-white font-bold">Update</button>
-                                    <button onClick={() => handleDeleteVisa(visa._id)} className="btn bg-red-500 text-white font-bold">Delete</button>
-                                </div>
+            <div className="mt-10 mb-4 space-y-3">
+                <h2 className="text-3xl font-bold text-center">
+                    Visa Applications Overview
+                </h2>
+                <p className="font-medium text-center">
+                    Easily view, update, and organize your visa applications at your convenience
+                </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
+                {addedVisas.map((visa, index) => (
+                    <div key={index} className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg">
+                        <div className="relative h-40 m-2.5 overflow-hidden text-white rounded-md">
+                            <img className="w-full h-full transition-transform duration-300 ease-in-out transform hover:scale-110" src={visa.CountryImage} alt="card-image" />
+                        </div>
+                        <div className="p-4 space-y-2">
+                            <h6 className="mb-2 text-slate-800 text-xl font-semibold">
+                                {visa.CountryName}
+                            </h6>
+                            <p className="text-slate-800 leading-normal text-sm">
+                                <span className="font-bold">Visa Type:</span> {visa.Visa_Type}
+                            </p>
+                            <p className="text-slate-800 leading-normal text-sm">
+                                <span className="font-bold">Processing Time:</span> {visa.Processing_Time}
+                            </p>
+                            <p className="text-slate-800 leading-normal text-sm">
+                                <span className="font-bold">Fee:</span> {visa.Fee}
+                            </p>
+                            <p className="text-slate-800 leading-normal text-sm">
+                                <span className="font-bold">Validity:</span> {visa.Validity}
+                            </p>
+                            <p className="text-slate-800 leading-normal text-sm">
+                                <span className="font-bold">Application Method:</span> {visa.Application_Method}
+                            </p>
+                            <div className="flex justify-between gap-2 pt-4">
+                                <button onClick={() => handleUpdateVisa(visa._id)} className="btn bg-green-500 text-white font-bold">Update</button>
+                                <button onClick={() => handleDeleteVisa(visa._id)} className="btn bg-red-500 text-white font-bold">Delete</button>
                             </div>
                         </div>
-                    ))}
-                </div>
-            ) : (
-                <div className="flex flex-col justify-center items-center space-y-4">
-                    <h1 className="text-3xl font-bold text-center h-screen flex flex-col justify-center items-center">
-                        You have not added any visas yet!
-                    </h1>
-                </div>
-            )}
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };
