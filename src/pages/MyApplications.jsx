@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
+import { AuthContext } from "../providers/AuthProvider";
 
 const MyApplications = () => {
     const [visaApplication, setVisaApplication] = useState([]);
+    const {user} = useContext(AuthContext);
 
     useEffect(() => {
         fetch('https://visa-guide-server-zeta.vercel.app/visa-application')
@@ -71,6 +73,7 @@ const MyApplications = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {
                     visaApplication.map((visa, idx) => (
+                        visa.email === user.email &&
                         <div key={idx} className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg">
                             <div className="relative h-40 m-2.5 overflow-hidden text-white rounded-md">
                                 <img className="w-full h-full transition-transform duration-300 ease-in-out transform hover:scale-110" src={visa.visaData.CountryImage} alt="card-image" />

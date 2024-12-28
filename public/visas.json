@@ -215,5 +215,97 @@
         "Fee": "$60",
         "Validity": "30 days",
         "Application_Method": "Online & Offline"
+    },
+    {
+        "CountryImage": "https://i.ibb.co/Z2Rm2t3/australia.jpg",
+        "CountryName": "Australia",
+        "Visa_Type": "Student Visa",
+        "Processing_Time": "4-6 weeks",
+        "Required_Documents": [
+            "Valid passport",
+            "Visa application form",
+            "Confirmation of Enrollment (CoE)",
+            "Proof of financial capacity",
+            "Overseas Student Health Cover (OSHC)",
+            "English language proficiency proof"
+        ],
+        "Description": "The Australia Student Visa allows individuals to study full-time in recognized institutions in Australia.",
+        "Age_Restriction": "No restriction",
+        "Fee": "$630",
+        "Validity": "Duration of the course",
+        "Application_Method": "Online"
+    },
+    {
+        "CountryImage": "https://i.ibb.co/T1fYPsC/canada.jpg",
+        "CountryName": "Canada",
+        "Visa_Type": "Work Visa",
+        "Processing_Time": "3-4 weeks",
+        "Required_Documents": [
+            "Valid passport",
+            "Job offer letter",
+            "LMIA approval (if applicable)",
+            "Visa application form",
+            "Proof of funds",
+            "Biometric details"
+        ],
+        "Description": "The Canada Work Visa allows professionals to work temporarily in Canada under specific employment terms.",
+        "Age_Restriction": "18 years and above",
+        "Fee": "$155",
+        "Validity": "2-3 years",
+        "Application_Method": "Online"
+    },
+    {
+        "CountryImage": "https://i.ibb.co/2cSPQtT/germany.jpg",
+        "CountryName": "Germany",
+        "Visa_Type": "Job Seeker Visa",
+        "Processing_Time": "4-6 weeks",
+        "Required_Documents": [
+            "Valid passport",
+            "Visa application form",
+            "Proof of academic qualifications",
+            "Proof of funds",
+            "Health insurance"
+        ],
+        "Description": "The Germany Job Seeker Visa allows qualified professionals to stay in Germany to search for employment.",
+        "Age_Restriction": "18 years and above",
+        "Fee": "$85",
+        "Validity": "6 months",
+        "Application_Method": "Offline"
+    },
+    {
+        "CountryImage": "https://i.ibb.co/q1VkXpY/singapore.jpg",
+        "CountryName": "Singapore",
+        "Visa_Type": "Business Visa",
+        "Processing_Time": "3-5 days",
+        "Required_Documents": [
+            "Valid passport",
+            "Visa application form",
+            "Invitation letter",
+            "Proof of financial support",
+            "Travel itinerary"
+        ],
+        "Description": "The Singapore Business Visa is for individuals visiting Singapore for business meetings, conferences, or trade fairs.",
+        "Age_Restriction": "No restriction",
+        "Fee": "$30",
+        "Validity": "30 days",
+        "Application_Method": "Online"
+    },
+    {
+        "CountryImage": "https://i.ibb.co/28vjFJJ/thailand.jpg",
+        "CountryName": "Thailand",
+        "Visa_Type": "Digital Nomad Visa",
+        "Processing_Time": "2 weeks",
+        "Required_Documents": [
+            "Valid passport",
+            "Visa application form",
+            "Proof of remote work employment",
+            "Proof of income",
+            "Health insurance"
+        ],
+        "Description": "The Thailand Digital Nomad Visa allows remote workers to live and work remotely from Thailand.",
+        "Age_Restriction": "18 years and above",
+        "Fee": "$200",
+        "Validity": "1 year",
+        "Application_Method": "Online & Offline"
     }
 ]

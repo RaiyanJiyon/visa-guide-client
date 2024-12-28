@@ -1,8 +1,12 @@
 import { useLoaderData } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import VisaCard from "../components/visa/VisaCard";
 
 const AllVisas = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    } , []);
+    
     const allVisas = useLoaderData();
     const [filter, setFilter] = useState('All Visas');
 

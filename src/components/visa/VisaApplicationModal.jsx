@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const VisaApplicationModal = ({ isOpen, onClose, visaData }) => {
     useEffect(() => {
@@ -8,6 +9,7 @@ const VisaApplicationModal = ({ isOpen, onClose, visaData }) => {
     }, []);
 
     const { user } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleVisaApplicationForm = e => {
         e.preventDefault();
@@ -47,6 +49,7 @@ const VisaApplicationModal = ({ isOpen, onClose, visaData }) => {
                 });
                 form.reset();
                 onClose();
+                navigate('/my-applications')
             }
         })
         .catch(error => {

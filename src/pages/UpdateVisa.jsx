@@ -77,7 +77,7 @@ const UpdateVisa = () => {
                         timer: 1500
                     });
                     form.reset();
-                    navigate('/all-visas');
+                    navigate('/my-added-visas');
                 }
             })
             .catch(error => {
