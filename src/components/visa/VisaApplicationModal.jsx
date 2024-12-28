@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 
-const VisaApplicationModal = ({ isOpen, onClose }) => {
+const VisaApplicationModal = ({ isOpen, onClose, visaData }) => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -20,15 +20,15 @@ const VisaApplicationModal = ({ isOpen, onClose }) => {
         const applied_date = formData.get('applied_date');
         const fee = formData.get('fee');
 
-        const visaData = { email, firstName, lastName, applied_date, fee };
-        console.log(visaData);
+        const visaInformation = { email, firstName, lastName, applied_date, fee, visaData };
+        console.log(visaInformation);
 
         fetch('http://localhost:5000/visa-application', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(visaData)
+            body: JSON.stringify(visaInformation)
         })
         .then(res => {
             if (!res.ok) {

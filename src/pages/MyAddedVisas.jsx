@@ -112,7 +112,7 @@ const MyAddedVisas = () => {
                 </div>
             ) : (
                 <div className="flex flex-col justify-center items-center space-y-4">
-                    <h1 className="text-3xl font-bold text-center">
+                    <h1 className="text-3xl font-bold text-center h-screen flex flex-col justify-center items-center">
                         You have not added any visas yet!
                     </h1>
                 </div>

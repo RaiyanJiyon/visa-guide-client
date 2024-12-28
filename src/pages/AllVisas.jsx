@@ -22,7 +22,7 @@ const AllVisas = () => {
                     View and manage the status of your visa applications with ease.
                 </p>
             </div>
-            <div className="dropdown dropdown-hover">
+            <div className="dropdown dropdown-hover mt-10 md:mt-0">
                 <div tabIndex={0} role="button" className="btn m-1 bg-sky-600 text-white font-bold">Filtered By</div>
                 <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
                     <li><a onClick={() => handleFilterChange('All Visas')}>All Visas</a></li>

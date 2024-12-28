@@ -19,7 +19,7 @@ const VisaDetails = () => {
                 <img className="h-full w-full rounded-lg" src={visaData.CountryImage} alt={`${visaData.CountryName} image`} />
                 <h4 className="absolute bottom-4 left-4 text-2xl text-white font-extrabold">{visaData.CountryName}</h4>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-4">
+            <div className="grid grid-cols-1 lg:grid-cols-3 md:gap-6 mt-4">
                 <div className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg p-4">
                     <h5 className="mb-2 text-slate-800 text-xl font-semibold">
                         Visa Information
@@ -66,7 +66,7 @@ const VisaDetails = () => {
                 <button onClick={openModal} className="btn bg-blue-600 text-white font-bold">Apply Now</button>
             </div>
         
-            <VisaApplicationModal isOpen={isModalOpen} onClose={closeModal} />
+            <VisaApplicationModal isOpen={isModalOpen} onClose={closeModal} visaData={visaData} />
         </div>
     );
 };

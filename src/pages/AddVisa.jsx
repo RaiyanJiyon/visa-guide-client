@@ -79,9 +79,13 @@ const AddVisa = () => {
 
     return (
         <div>
-            <div className="flex flex-col gap-2 py-10 bg-blue-500 text-white text-center">
-                <h2 className="text-3xl font-bold">Add Visa Details</h2>
-                <p className="font-medium">Simplify visa management by adding essential visa information here.</p>
+            <div className="mt-10 mb-4 space-y-3">
+                <h2 className="text-3xl font-bold text-center">
+                Add Visa Details
+                </h2>
+                <p className="font-medium text-center">
+                Simplify visa management by adding essential visa information here.
+                </p>
             </div>
 
             <form onSubmit={handleAddVisaForm} className="card-body">

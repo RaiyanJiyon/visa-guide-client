@@ -64,17 +64,6 @@ const Header = () => {
             >
                 My Visa Application
             </NavLink>
-            {user && (
-                <NavLink
-                    to="/profile"
-                    className={({ isActive }) =>
-                        isActive ? 'text-blue-600 font-medium underline'
-                            : 'text-gray-800 hover:text-blue-600 dark:text-white dark:hover:text-blue-400'
-                    }
-                >
-                    My Profile
-                </NavLink>
-            )}
         </>
     );
 
@@ -141,13 +130,6 @@ const Header = () => {
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-blue-500 text-white rounded-box z-[1] mt-3 w-52 p-2 shadow"
                         >
-                            <li>
-                                <Link to="/profile" className="justify-between">
-                                    Profile
-                                    <span className="badge">New</span>
-                                </Link>
-                            </li>
-                            <li><Link to="/profile/update">Update Profile</Link></li>
                             <li onClick={handleSignOut}><a>Logout</a></li>
                         </ul>
                     </div>
