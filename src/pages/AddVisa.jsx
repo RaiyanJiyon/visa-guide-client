@@ -40,7 +40,7 @@ const AddVisa = () => {
         };
         console.log(visaData);
 
-        fetch('http://localhost:5000/visas', {
+        fetch('https://visa-guide-server-zeta.vercel.app/visas', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -14,7 +14,7 @@ const MyAddedVisas = () => {
     const [addedVisas, setAddedVisas] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/added-visa/${user.email}`)
+        fetch(`https://visa-guide-server-zeta.vercel.app/added-visa/${user.email}`)
             .then(res => {
                 if (!res.ok) {
                     throw new Error("Network issue");
@@ -44,7 +44,7 @@ const MyAddedVisas = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/visa/${id}`, {
+                fetch(`https://visa-guide-server-zeta.vercel.app/visa/${id}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json'

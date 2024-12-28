@@ -54,7 +54,7 @@ const UpdateVisa = () => {
         };
         console.log(visaData);
 
-        fetch(`http://localhost:5000/visa/${filteredVisa._id}`, {
+        fetch(`https://visa-guide-server-zeta.vercel.app/visa/${filteredVisa._id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

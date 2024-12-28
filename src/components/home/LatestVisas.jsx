@@ -5,7 +5,7 @@ const LatestVisas = () => {
     const [latestVisas, setLatestVisas] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/featured-visas')
+        fetch('https://visa-guide-server-zeta.vercel.app/featured-visas')
         .then(res => {
             if (!res.ok) {
                 throw new Error("Data fetch issue");

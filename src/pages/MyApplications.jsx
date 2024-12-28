@@ -5,7 +5,7 @@ const MyApplications = () => {
     const [visaApplication, setVisaApplication] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/visa-application')
+        fetch('https://visa-guide-server-zeta.vercel.app/visa-application')
             .then(res => {
                 if (!res.ok) {
                     throw new Error("Data fetch issue");
@@ -29,7 +29,7 @@ const MyApplications = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/visa-application/${id}`, {
+                fetch(`https://visa-guide-server-zeta.vercel.app/visa-application/${id}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json'

@@ -23,7 +23,7 @@ const VisaApplicationModal = ({ isOpen, onClose, visaData }) => {
         const visaInformation = { email, firstName, lastName, applied_date, fee, visaData };
         console.log(visaInformation);
 
-        fetch('http://localhost:5000/visa-application', {
+        fetch('https://visa-guide-server-zeta.vercel.app/visa-application', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

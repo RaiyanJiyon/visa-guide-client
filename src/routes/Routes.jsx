@@ -25,7 +25,7 @@ const router = createBrowserRouter([
             {
                 path: "/all-visas",
                 element: <AllVisas />,
-                loader: () => fetch('http://localhost:5000/visas')
+                loader: () => fetch('https://visa-guide-server-zeta.vercel.app/visas')
             },
             {
                 path: "/visa/:id",
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
                         <VisaDetails />
                     </PrivateRoute>
                 ),
-                loader: ({params}) => fetch(`http://localhost:5000/visas/${params.id}`)
+                loader: ({params}) => fetch(`https://visa-guide-server-zeta.vercel.app/visas/${params.id}`)
             },
             {
                 path: "/add-visa",
@@ -67,7 +67,7 @@ const router = createBrowserRouter([
                         <UpdateVisa />
                     </PrivateRoute>
                 ),
-                loader: () => fetch('http://localhost:5000/visas')
+                loader: () => fetch('https://visa-guide-server-zeta.vercel.app/visas')
             },
             {
                 path: "/login",
