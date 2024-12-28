@@ -3,8 +3,12 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../providers/AuthProvider";
 
 const MyApplications = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const [visaApplication, setVisaApplication] = useState([]);
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
     useEffect(() => {
         fetch('https://visa-guide-server-zeta.vercel.app/visa-application')
